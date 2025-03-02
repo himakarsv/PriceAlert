@@ -11,12 +11,12 @@ const Product = require("./models/product");
 const authRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const cors = require("cors");
-app.use(cors());
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 
+app.use(cors());
 // Connect to MongoDB
 const mongoURI = process.env.MONGO_URL;
 console.log("MongoDB URI:", mongoURI);
